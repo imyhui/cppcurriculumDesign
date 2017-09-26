@@ -1,0 +1,85 @@
+# Project: curriculumDesign
+# Makefile created by Dev-C++ 5.9.2
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o employee.o manager.o salesman.o salesmanager.o technician.o controldestory.o showface.o addinformation.o cancelinformation.o searchinformation.o changeinformation.o showinformation.o countinformation.o readinformation.o keepinformation.o tongjiformation.o Face.o errorjudge.o gotoxy.o
+LINKOBJ  = main.o employee.o manager.o salesman.o salesmanager.o technician.o controldestory.o showface.o addinformation.o cancelinformation.o searchinformation.o changeinformation.o showinformation.o countinformation.o readinformation.o keepinformation.o tongjiformation.o Face.o errorjudge.o gotoxy.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = curriculumDesign.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+employee.o: employee.cpp
+	$(CPP) -c employee.cpp -o employee.o $(CXXFLAGS)
+
+manager.o: manager.cpp
+	$(CPP) -c manager.cpp -o manager.o $(CXXFLAGS)
+
+salesman.o: salesman.cpp
+	$(CPP) -c salesman.cpp -o salesman.o $(CXXFLAGS)
+
+salesmanager.o: salesmanager.cpp
+	$(CPP) -c salesmanager.cpp -o salesmanager.o $(CXXFLAGS)
+
+technician.o: technician.cpp
+	$(CPP) -c technician.cpp -o technician.o $(CXXFLAGS)
+
+controldestory.o: controldestory.cpp
+	$(CPP) -c controldestory.cpp -o controldestory.o $(CXXFLAGS)
+
+showface.o: showface.cpp
+	$(CPP) -c showface.cpp -o showface.o $(CXXFLAGS)
+
+addinformation.o: addinformation.cpp
+	$(CPP) -c addinformation.cpp -o addinformation.o $(CXXFLAGS)
+
+cancelinformation.o: cancelinformation.cpp
+	$(CPP) -c cancelinformation.cpp -o cancelinformation.o $(CXXFLAGS)
+
+searchinformation.o: searchinformation.cpp
+	$(CPP) -c searchinformation.cpp -o searchinformation.o $(CXXFLAGS)
+
+changeinformation.o: changeinformation.cpp
+	$(CPP) -c changeinformation.cpp -o changeinformation.o $(CXXFLAGS)
+
+showinformation.o: showinformation.cpp
+	$(CPP) -c showinformation.cpp -o showinformation.o $(CXXFLAGS)
+
+countinformation.o: countinformation.cpp
+	$(CPP) -c countinformation.cpp -o countinformation.o $(CXXFLAGS)
+
+readinformation.o: readinformation.cpp
+	$(CPP) -c readinformation.cpp -o readinformation.o $(CXXFLAGS)
+
+keepinformation.o: keepinformation.cpp
+	$(CPP) -c keepinformation.cpp -o keepinformation.o $(CXXFLAGS)
+
+tongjiformation.o: tongjiformation.cpp
+	$(CPP) -c tongjiformation.cpp -o tongjiformation.o $(CXXFLAGS)
+
+Face.o: Face.cpp
+	$(CPP) -c Face.cpp -o Face.o $(CXXFLAGS)
+
+errorjudge.o: errorjudge.cpp
+	$(CPP) -c errorjudge.cpp -o errorjudge.o $(CXXFLAGS)
+
+gotoxy.o: gotoxy.cpp
+	$(CPP) -c gotoxy.cpp -o gotoxy.o $(CXXFLAGS)
